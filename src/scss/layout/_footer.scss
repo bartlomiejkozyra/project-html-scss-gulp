@@ -19,8 +19,8 @@
         }
     }
     &__image {
-        width: 100%;
         margin-top: 45px;
+        width: 100%;
         @include respond-to(lg) {
             margin-top: 0;
         }
@@ -32,10 +32,10 @@
         }
     }
     &__title {
-        text-transform: uppercase;
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 15px;
+        text-transform: uppercase;
     }
     &__partners {
         padding-right: 65px;
@@ -43,18 +43,18 @@
             padding-right: 35px;
         }
         @include respond-to(xs) {
-            padding-right: 0
+            padding-right: 0;
         }
         p {
-            display: inline-block;
-            margin: 5px 5px 5px 0;
-            padding: 3px 10px;
             background: #f0f0f0;
             color: $black;
-            text-transform: uppercase;
-            font-weight: 500;
-            font-size: 13px;
             cursor: pointer;
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 500;
+            margin: 5px 5px 5px 0;
+            padding: 3px 10px;
+            text-transform: uppercase;
             @include events {
                 background: $neon;
                 color: $white;
@@ -73,25 +73,23 @@
             text-align: left;
         }
     }
-
 }
 
 .main-menu--footer {
-    flex-direction: column;
     align-items: flex-start;
+    flex-direction: column;
     @include respond-to(xs) {
         align-items: center;
     }
     .main-menu__item {
         margin-left: 0;
         text-align: left;
-
     }
     .main-menu__link {
+        @include transition;
+        display: inline-block;
         font-size: 14px;
         margin-bottom: 5px;
-        display: inline-block;
-        @include transition;
         @include events {
             color: $lighter-green;
         }
@@ -103,21 +101,21 @@
 }
 
 .scroll-top {
-    height: 40px;
-    width: 40px;
-    background: $neon;
-    color: $white;
-    border-radius: 5px;
-    display: flex;
     align-items: center;
+    background: $neon;
+    border-radius: 5px;
+    bottom: 0;
+    color: $white;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
     justify-content: center;
     position: absolute;
     right: 0;
-    bottom: 0;
-    cursor: pointer;
+    width: 40px;
     @include respond-to(xs) {
+        bottom: 2px;
         height: 32px;
         width: 32px;
-        bottom: 2px
     }
 }

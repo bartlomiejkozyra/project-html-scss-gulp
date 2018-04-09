@@ -1,8 +1,8 @@
 .slideshow-box {
-    position: relative;
-    z-index: 1;
     height: calc(100vh - 100px);
+    position: relative;
     width: 100%;
+    z-index: 1;
     .slick-list {
         height: 100%;
         .slick-track {
@@ -17,21 +17,21 @@
             position: relative;
             z-index: 1;
             &:before {
-                position: absolute;
-                content: '';
-                width: 100%;
-                height: 100%;
                 background: rgba($green, .15);
+                content: '';
+                height: 100%;
+                position: absolute;
+                width: 100%;
                 z-index: 9;
             }
             img {
-                transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
-                transform: scale(1.2);
                 @include objectfit;
+                transform: scale(1.2);
+                transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
             }
             &.slick-active img {
-                transform: scale(1);
                 @include objectfit;
+                transform: scale(1);
             }
         }
     }
@@ -39,30 +39,30 @@
 
 .slick-dots {
     @include center(vertical);
-    z-index: 999;
-    right: 15px;
     list-style-type: none;
     padding-left: 0;
+    right: 15px;
+    z-index: 999;
     @include respond-to(xs) {
-        bottom: 15px;
         @include center(horizontal);
-        top: auto;
+        bottom: 15px;
         text-align: center;
+        top: auto;
     }
     li {
         @include respond-to(xs) {
             display: inline-block;
         }
         button {
-            content: '';
-            width: 16px;
-            margin-bottom: 10px;
-            height: 16px;
-            border-radius: 5px;
-            border: 0;
             background: rgba($white, .85);
-            font-size: 0;
+            border: 0;
+            border-radius: 5px;
+            content: '';
             cursor: pointer;
+            font-size: 0;
+            height: 16px;
+            margin-bottom: 10px;
+            width: 16px;
             @include events {
                 outline: 0;
             }
@@ -72,8 +72,8 @@
         }
         &.slick-active {
             button {
-                border: 0;
                 background: rgba($lighter-green, .85);
+                border: 0;
                 @include events {
                     outline: 0;
                 }
@@ -119,29 +119,29 @@
                 font-size: 18px;
             }
             &:before {
+                @indlude center(vertical);
                 color: $white;
                 content: '<';
-                font-size: 40px;
                 font-family: 'Chewy', cursive;
-                @indlude center(vertical);
+                font-size: 40px;
                 margin-right: 15px;
                 @include respond-to(xs) {
+                    font-size: 34px;
                     position: relative;
                     top: 2px;
-                    font-size: 34px;
                 }
             }
             &:after {
+                @indlude center(vertical);
                 color: $white;
                 content: '/>';
                 font-family: 'Chewy', cursive;
                 font-size: 40px;
                 margin-left: 15px;
-                @indlude center(vertical);
                 @include respond-to(xs) {
-                    top: 3px;
                     font-size: 28px;
                     position: relative;
+                    top: 3px;
                 }
             }
         }

@@ -18,7 +18,7 @@
         text-align: center;
         width: (100% / 5);
         @include respond-to(lg) {
-            height: 200px;;
+            height: 200px;
         }
         @include respond-to(md) {
             height: 150px;

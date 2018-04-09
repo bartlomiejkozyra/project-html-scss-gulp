@@ -10,15 +10,15 @@
 .button {
     @include transition(all, .3s);
     background: none;
-    padding: 8px 15px;
+    cursor: pointer;
     display: block;
     justify-content: center;
+    padding: 8px 15px;
     position: relative;
     text-shadow: none;
-    cursor: pointer;
     @include events {
-        text-decoration: none;
         color: $white;
+        text-decoration: none;
     }
     &--slider {
         @include transition(all, .3s);
@@ -39,13 +39,12 @@
                 background: rgba($lighter-green, 1);
             }
         }
-        @include respond-to(xs){
-            width: 120px;
+        @include respond-to(xs) {
             font-size: 13px;
             margin: 0 7.5px;
+            width: 120px;
         }
     }
-
     &--form {
         @include transition;
         background: rgba($neon, .8);

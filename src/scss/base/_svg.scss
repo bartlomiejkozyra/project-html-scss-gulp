@@ -1,5 +1,5 @@
 .svg-gmail {
-    @include transition(all, .3s);
+    @include transition(all,.3s);
     fill: $grey;
     width: 120px;
     @include respond-to(md) {
@@ -9,7 +9,6 @@
         width: 60px;
     }
 }
-
 .svg-yelp {
     width: 200px;
     @include respond-to(md) {
@@ -19,17 +18,16 @@
         width: 90px;
     }
     &-red {
-        @include transition(all, .3s);
+        @include transition(all,.3s);
         fill: $grey;
     }
     &-black {
-        @include transition(all, .3s);
+        @include transition(all,.3s);
         fill: $grey;
     }
 }
-
 .svg-github {
-    @include transition(all, .3s);
+    @include transition(all,.3s);
     fill: $grey;
     width: 130px;
     @include respond-to(md) {
@@ -39,9 +37,8 @@
         width: 70px;
     }
 }
-
 .svg-youtube {
-    @include transition(all, .3s);
+    @include transition(all,.3s);
     fill: $grey;
     width: 100px;
     @include respond-to(md) {
@@ -51,9 +48,8 @@
         width: 50px;
     }
 }
-
 .svg-fb {
-    @include transition(all, .3s);
+    @include transition(all,.3s);
     fill: $grey;
     width: 90px;
     @include respond-to(md) {
@@ -63,9 +59,8 @@
         width: 45px;
     }
 }
-
 .svg-snap {
-    @include transition(all, .3s);
+    @include transition(all,.3s);
     fill: $grey;
     width: 110px;
     @include respond-to(md) {
@@ -75,10 +70,9 @@
         width: 60px;
     }
 }
-
 .svg-apple {
+    fill: $grey;
     width: 120px;
-    fill: $grey;
     @include respond-to(md) {
         width: 90px;
     }
@@ -86,10 +80,8 @@
         width: 60px;
     }
 }
-
-
 .svg-linkedin {
-    @include transition(all, .3s);
+    @include transition(all,.3s);
     fill: $grey;
     width: 110px;
     @include respond-to(md) {
@@ -99,9 +91,8 @@
         width: 60px;
     }
 }
-
 .svg-twitter {
-    @include transition(all, .3s);
+    @include transition(all,.3s);
     fill: $grey;
     width: 110px;
     @include respond-to(md) {
@@ -111,9 +102,8 @@
         width: 60px;
     }
 }
-
 .svg-android {
-    @include transition(all, .3s);
+    @include transition(all,.3s);
     fill: $grey;
     width: 110px;
     @include respond-to(md) {
@@ -123,7 +113,6 @@
         width: 60px;
     }
 }
-
 .partner-box {
     &:hover {
         .svg-gmail {
@@ -137,38 +126,36 @@
                 fill: #231f20;
             }
         }
-
         .svg-github {
             fill: $github;
         }
-
         .svg-youtube {
             fill: $youtube;
         }
         .svg-fb {
-            @include transition(all, .3s);
+            @include transition(all,.3s);
             fill: $facebook;
             width: 90px;
         }
         .svg-snap {
-            @include transition(all, .3s);
+            @include transition(all,.3s);
             fill: #fffc00;
             width: 110px;
         }
         .svg-apple {
-            @include transition(all, .3s);
+            @include transition(all,.3s);
             fill: $black;
         }
         .svg-linkedin {
-            @include transition(all, .3s);
+            @include transition(all,.3s);
             fill: #0077b5;
         }
         .svg-twitter {
-            @include transition(all, .3s);
+            @include transition(all,.3s);
             fill: $twitter;
         }
         .svg-android {
-            @include transition(all, .3s);
+            @include transition(all,.3s);
             fill: #a4ca39;
         }
     }

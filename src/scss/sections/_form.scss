@@ -25,23 +25,23 @@
         @include respond-to(xs) {
             font-size: 18px;
             margin-bottom: 45px;
+            margin-bottom: 15;
+            margin-left: 0;
             text-align: center;
             width: 100%;
-            margin-left: 0;
-            margin-bottom: 15;
         }
         &:before {
-            content: '<';
-            position: absolute;
-            font-family: 'Chewy', cursive;
-            left: -30px;
-            top: -8px;
-            color: $lighter-green;
-            font-size: 44px;
             @include transition;
+            color: $lighter-green;
+            content: '<';
+            font-family: 'Chewy', cursive;
+            font-size: 44px;
+            left: -30px;
+            position: absolute;
+            top: -8px;
             @include respond-to(md) {
-                top: -11px;
                 font-size: 42px;
+                top: -11px;
             }
             @include respond-to(xs) {
                 font-size: 32px;
@@ -51,23 +51,23 @@
             }
         }
         &:after {
-            content: '/>';
-            position: absolute;
-            font-family: 'Chewy', cursive;
-            right: -45px;
-            color: $lighter-green;
-            font-size: 44px;
-            top: -4px;
             @include transition;
+            color: $lighter-green;
+            content: '/>';
+            font-family: 'Chewy', cursive;
+            font-size: 44px;
+            position: absolute;
+            right: -45px;
+            top: -4px;
             @include respond-to(md) {
-                top: -7px;
                 font-size: 40px;
+                top: -7px;
             }
             @include respond-to(xs) {
                 font-size: 28px;
+                position: relative;
                 right: -10px;
                 top: 2px;
-                position: relative;
             }
         }
     }

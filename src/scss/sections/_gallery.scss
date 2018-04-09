@@ -23,7 +23,6 @@
             }
         }
     }
-
     .gallery-box {
         @include transition(all, .3s);
         background: $neon;
@@ -48,9 +47,9 @@
             }
         }
         &__link {
-            width: 100%;
-            height: 100%;
             display: inline-block;
+            height: 100%;
+            width: 100%;
         }
         img {
             @include objectfit;
@@ -58,16 +57,16 @@
         }
         .gallery-info {
             &__title {
-                position: absolute;
+                @include transition(all, .3s);
                 bottom: 0;
+                color: $white;
+                font-weight: 300;
                 left: 0;
                 padding: 30px;
-                color: $white;
-                text-transform: uppercase;
+                position: absolute;
                 text-shadow: 1px 1px 3px $grey;
+                text-transform: uppercase;
                 transform: translate3d(0, 0, 0);
-                @include transition(all, .3s);
-                font-weight: 300;
                 @include respond-to(lg) {
                     font-size: 24px;
                 }
@@ -78,20 +77,19 @@
                     font-weight: 700;
                 }
             }
-
             &__subtitle {
-                position: absolute;
+                @include flex(vertical);
+                @include transition(all, .3s);
                 bottom: 0;
-                left: 0;
-                padding-left: 30px;
-                text-transform: none;
+                color: $white;
                 font-size: 16px;
                 font-weight: 500;
                 height: 70px;
-                @include transition(all, .3s);
-                @include flex(vertical);
+                left: 0;
                 margin-bottom: 0;
-                color: $white;
+                padding-left: 30px;
+                position: absolute;
+                text-transform: none;
                 transform: translate3d(0, 70px, 0);
                 @include respond-to(lg) {
                     font-size: 14px;
@@ -121,6 +119,5 @@
                 }
             }
         }
-
     }
 }
