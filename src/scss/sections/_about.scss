@@ -1,0 +1,214 @@
+.about {
+    &-container {
+        background: #f7f7f7;
+    }
+    &-wrapper {
+        padding: 100px 150px 100px 100px;
+        @include respond-to(xl) {
+            padding: 75px 50px 75px 50px;
+        }
+        @include respond-to(md) {
+            padding: 50px 50px 30px 50px;
+        }
+        @include respond-to(sm) {
+            padding: 50px 25px 30px 25px;
+        }
+        @include respond-to(xs) {
+            padding: 25px 15px 25px 15px;
+        }
+        &__title {
+            color: $grey;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            margin-left: 25px;
+            display: inline-block;
+            position: relative;
+            text-transform: uppercase;
+            @include respond-to(md) {
+                font-size: 30px;
+            }
+            @include respond-to(sm) {
+                font-size: 26px;
+            }
+            @include respond-to(xs) {
+                font-size: 18px;
+                margin-left: 20px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            &:before {
+                content: '<';
+                position: absolute;
+                font-family: 'Chewy', cursive;
+                left: -25px;
+                top: -9px;
+                color: $green;
+                font-size: 44px;
+                @include respond-to(sm) {
+                    top: -13px;
+                }
+                @include respond-to(xs) {
+                    font-size: 26px;
+                    left: -20px;
+                    top: -8px;
+                    margin-bottom: 20px;
+                }
+            }
+            &:after {
+                content: '/>';
+                position: absolute;
+                font-family: 'Chewy', cursive;
+                color: $lighter-green;
+                font-size: 40px;
+                top: -2px;
+                right: -40px;
+                @include respond-to(sm) {
+                    top: -9px;
+                }
+                @include respond-to(xs) {
+                    font-size: 24px;
+                    right: -25px;
+                    top: -4px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        p {
+            font-weight: 300;
+            font-size: 15px;
+            @include respond-to(sm) {
+                font-size: 13px;
+            }
+        }
+    }
+
+    &-images {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        &__big {
+            display: flex;
+            height: 400px;
+            overflow: hidden;
+            border-bottom: 3px solid #f7f7f7;
+            position: relative;
+            @include respond-to(xs) {
+                height: 180px;
+            }
+            &:before {
+                @include transition(background, .45s);
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: rgba($grey, .35);
+                z-index: 9;
+            }
+            img {
+                @include objectfit;
+            }
+        }
+        &__small {
+            display: inline-flex;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            border-right: 3px solid #f7f7f7;
+            width: 50%;
+            @include respond-to(lg) {
+                width: 50%;
+            }
+            @include respond-to(xs) {
+                height: 180px;
+                width: 100%;
+                border-right: 0;
+                border-bottom: 3px solid #f7f7f7;
+            }
+            &:nth-child(2) {
+                border-right: 0;
+            }
+            &:before {
+                @include transition(background, .65s);
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: rgba($grey, .3);
+                z-index: 9;
+            }
+            &-box {
+                display: flex;
+                flex-direction: row;
+                @include respond-to(xs) {
+                    flex-direction: column;
+                }
+            }
+            img {
+                @include objectfit;
+            }
+        }
+    }
+}
+
+.about-images__big,
+.about-images__small {
+    .fig-title {
+        text-transform: uppercase;
+        position: absolute;
+        z-index: 9;
+        bottom: 30px;
+        left: 30px;
+        color: $white;
+        text-shadow: 1px 1px 3px $grey;
+        transform: translate3d(0, 0, 0);
+        @include transition(all, .25s);
+        transition-delay: .25s;
+        font-weight: 300;
+        span {
+            font-weight: 700;
+            color: $neon;
+        }
+        @include respond-to(xs) {
+            font-size: 22px;
+            bottom: 45px;
+        }
+    }
+    .fig-subtitle {
+        background: $white;
+        color: $lighter-green;
+        position: absolute;
+        z-index: 9;
+        bottom: 30px;
+        left: 30px;
+        padding: 5px 15px;
+        font-size: 14px;
+        color: #2f3238;
+        text-transform: none;
+        font-weight: 500;
+        @include transition(all, .45s);
+        transform: translate3d(-360px, 0, 0);
+        @include respond-to(xs) {
+            bottom: 0;
+            transform: translate3d(0, 0, 0);
+            font-size: 12px;
+        }
+    }
+    &:hover {
+        &:before {
+            background: rgba($grey, 0);
+        }
+        .fig-subtitle {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+            transition-delay: .3s;
+        }
+        .fig-title {
+            transform: translate3d(0, -45px, 0);
+            @include respond-to(xs) {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+}

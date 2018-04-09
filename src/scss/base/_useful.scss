@@ -1,0 +1,41 @@
+// object-fit fix - please check the file script.js
+.custom-object-fit {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    img {
+        opacity: 0;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.padding-reset {
+    padding: 0;
+}
+
+figure{
+    margin: 0;
+}
+
+::-webkit-input-placeholder {
+    color: #444;
+}
+
+::-moz-placeholder {
+    color: #444;
+}
+
+:-ms-input-placeholder {
+    color: #444;
+}
+
+:-moz-placeholder {
+    color: #444;
+}

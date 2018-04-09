@@ -1,0 +1,31 @@
+// colors
+$black: #000000;
+$white: #ffffff;
+$blue: #18337f;
+$green: #225811;
+$facebook: #3b5998;
+$twitter: #4ab4f5;
+$youtube: #ea2d0d;
+$google-plus: #dc4e41;
+$github: #5d2b7d;
+$light-green: #328e13;
+$lighter-green: #48ce1c;
+$dark-grey: #333333;
+$grey: #444444;
+$light-grey: #495057;
+$lighter-grey: #636a71;
+$neon: #63e738;
+
+//responsive
+$breakpoints: (
+  'xs': (max-width: 575px),
+  'sm': (max-width: 767px),
+  'md': (max-width: 991px),
+  'lg': (max-width: 1199px),
+  'xl': (max-width: 1599px),
+  'hxs': (max-height: 400px),
+  'hsm': (max-height: 599px),
+  'hmd': (max-height: 699px),
+  'hlg': (max-height: 768px),
+  'hxl': (min-height: 769px)
+);

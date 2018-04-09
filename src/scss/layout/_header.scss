@@ -1,0 +1,39 @@
+.header-container {
+    background: #fff;
+    height: 100px;
+}
+
+.header-wrapper {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    @include respond-to(xl) {
+        width: 95%;
+    }
+    @include respond-to(md) {
+        padding: 0 15px;
+        width: 100%;
+    }
+    @include respond-to(sm) {
+        height: 100px;
+    }
+    &__logo {
+        img {
+            height: 90px;
+            width: auto;
+            @include respond-to(sm) {
+                height: 80px;
+            }
+        }
+    }
+}
+
+.header-wrapper__navigation {
+    @include respond-to(md) {
+        height: 100%;
+        width: 100%;
+    }
+}

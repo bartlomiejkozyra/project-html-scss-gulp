@@ -1,0 +1,123 @@
+.footer {
+    padding: 50px 100px;
+    @include respond-to(md) {
+        padding: 50px;
+    }
+}
+
+.footer-box {
+    margin-bottom: 30px;
+    @include respond-to(lg) {
+        &:first-child {
+            display: none;
+        }
+    }
+    @include respond-to(xs) {
+        text-align: center;
+        &:first-child {
+            display: flex;
+        }
+    }
+    &__image {
+        width: 100%;
+        margin-top: 45px;
+        @include respond-to(lg) {
+            margin-top: 0;
+        }
+        img {
+            width: 200px;
+            @include respond-to(xs) {
+                width: 150px;
+            }
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    &__partners {
+        padding-right: 65px;
+        @include respond-to(xl) {
+            padding-right: 35px;
+        }
+        @include respond-to(xs) {
+            padding-right: 0
+        }
+        p {
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+            padding: 3px 10px;
+            background: #f0f0f0;
+            color: $black;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 13px;
+            cursor: pointer;
+            @include events {
+                background: $neon;
+                color: $white;
+            }
+        }
+    }
+    .social-box .fa-facebook-square {
+        margin-left: 0;
+    }
+    .social-box--footer {
+        display: block;
+        i {
+            display: inline-flex;
+        }
+        @include respond-to(xs) {
+            text-align: left;
+        }
+    }
+
+}
+
+.main-menu--footer {
+    flex-direction: column;
+    align-items: flex-start;
+    @include respond-to(xs) {
+        align-items: center;
+    }
+    .main-menu__item {
+        margin-left: 0;
+        text-align: left;
+
+    }
+    .main-menu__link {
+        font-size: 14px;
+        margin-bottom: 5px;
+        display: inline-block;
+        @include transition;
+        @include events {
+            color: $lighter-green;
+        }
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.scroll-top {
+    height: 40px;
+    width: 40px;
+    background: $neon;
+    color: $white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    @include respond-to(xs) {
+        height: 32px;
+        width: 32px;
+        bottom: 2px
+    }
+}
